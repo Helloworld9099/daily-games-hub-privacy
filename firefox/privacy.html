@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="color-scheme" content="light dark" />
+    <title>Daily Games Hub — Privacy</title>
+    <link rel="canonical" href="https://helloworld9099.github.io/daily-games-hub-privacy/firefox/privacy.html" />
+    <style>
+      :root {
+        color-scheme: light dark;
+        --bg: #f6f1e8;
+        --surface: #fffcf6;
+        --ink: #2b2a24;
+        --muted: #686458;
+        --line: #e4dbc9;
+        --teal: #2f6b63;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root {
+          --bg: #171613;
+          --surface: #201e1a;
+          --ink: #f2ece1;
+          --muted: #a9a294;
+          --line: #37332b;
+          --teal: #8ab8a9;
+        }
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+        line-height: 1.65;
+      }
+      main {
+        max-width: 640px;
+        margin: 0 auto;
+        padding: 48px 24px 72px;
+      }
+      .card {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 28px;
+      }
+      h1 { margin: 0 0 4px; font-size: 26px; letter-spacing: -0.03em; }
+      h2 { margin: 26px 0 6px; font-size: 16px; letter-spacing: -0.01em; }
+      p, li { color: var(--muted); font-size: 14px; }
+      strong { color: var(--ink); }
+      .eyebrow { margin: 0 0 12px; font-size: 11px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--muted); }
+      a { color: var(--teal); }
+      ul { padding-left: 20px; }
+      code { font-size: 12px; color: var(--ink); }
+      footer { margin-top: 24px; font-size: 12px; color: var(--muted); text-align: center; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="card">
+        <p class="eyebrow">Daily Games Hub</p>
+        <h1>Privacy policy</h1>
+        <p><strong>Effective 19 October 2026.</strong> Daily Games Hub is a browser extension that lists
+          third-party daily games and keeps a local record of results you choose to enter.</p>
+
+        <h2>What is stored, and where</h2>
+        <p>The extension uses <code>browser.storage.local</code> in your browser profile to store:</p>
+        <ul>
+          <li>results you enter (game, date, optional variant, outcome, optional guesses or score, and notes);</li>
+          <li>your favorite game IDs and daily-routine game IDs;</li>
+          <li>small display preferences such as sort order, routine filter and activity window.</li>
+        </ul>
+        <p>This data stays on your device. It is not sent to the developer or to any analytics,
+          advertising, or cloud service. The extension has no account system and no backend.</p>
+
+        <h2>What is not collected</h2>
+        <p>The extension does not read page contents, cookies, passwords, search history or answers
+          from game sites, and it never reads your clipboard automatically. If you choose to paste
+          Wordle or Connections share text into the import dialog, that text is parsed locally and is
+          not stored; only the resulting record is kept. There are no content scripts and opening a
+          game is never tracked as a completed play.</p>
+
+        <h2>Permissions</h2>
+        <ul>
+          <li><strong>storage</strong> — save your results, favorites and preferences locally.</li>
+        </ul>
+        <p>The Firefox sidebar is declared directly in the extension manifest; it is not a runtime
+          permission and does not grant access to web pages. No host permissions or content scripts
+          are requested.</p>
+        <p>Opening a game navigates to a third-party website in a normal browser tab. Those sites have
+          their own privacy policies and may set their own cookies. This extension does not embed or
+          proxy third-party games.</p>
+
+        <h2>Backups</h2>
+        <p>You can export a JSON backup from Settings. Export happens only when you click the button.
+          Importing a backup is validated in the extension before it is merged or used to replace local
+          data. Resetting removes local results, favorites, your routine and preferences from this browser.</p>
+
+        <h2>Data sharing and sale</h2>
+        <p>No personal data is sold, shared, or transferred to third parties. There are no ads and no
+          analytics SDKs in the extension.</p>
+
+        <h2>Contact</h2>
+        <p>Questions about this policy can be sent to <a href="https://github.com/Helloworld9099/daily-games-hub-privacy/issues">https://github.com/Helloworld9099/daily-games-hub-privacy/issues</a>.</p>
+      </div>
+      <footer>Daily Games Hub · local-first by design</footer>
+    </main>
+  </body>
+</html>
